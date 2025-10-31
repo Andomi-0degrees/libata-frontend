@@ -1,4 +1,7 @@
+
+// Primary project font
 $volksans: "volksans";
+$font-primary: 'Tajawal', Arial, sans-serif;
 
 // Typography Colors
 $typography-gold: #B3975F;
@@ -8,6 +11,6 @@ $typography-dark-blue: #1F2A45;
 
 // Typography Font Family
 $univers-font: "Univers LT Std", sans-serif;
-// Centralized font families
-$font-heading: "Amandine", "Gilroy", Arial, sans-serif;
-$font-body: "Gilroy", Arial, sans-serif;
+// Centralized font families (updated to Tajawal)
+$font-heading: $font-primary;
+$font-body: $font-primary;

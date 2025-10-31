@@ -1,21 +1,11 @@
 section.hero
   .container
-    .row
-      .col-12
-        h1 Hero
-        p Placeholder hero component.
-
-section.section.hero
-	.container
-		.row.align-items-center
-			.col-12.col-lg-6.order-2.order-lg-1
-				.hero__content
-					h2.hero__title.typography-heading-gold The Heart of Our Work
-					.hero__quote.typography-body-light-white
-						| "What we build should last. Not just now, but long after we are gone. It should hold meaning, show care, and carry forward what we stand for."
-					.hero__quote.typography-body-light-white Tariq Al Futtaim, Founder
-			.col-12.col-lg-6.order-1.order-lg-2
-				.hero__image
-					+img("blue-bg-with-line.png", 'Hero Background', 'hero-bg', false)
-					.hero__overlay
-						+img("with-eagle.png", 'Eagle Image', 'hero-eagle', false)
+    .hero__row
+      .hero__content
+        h1.hero__title One Number Mobile for Your Business — Simple, Smart, and Always Connected.
+        p.hero__desc Unify your communication with a single mobile business number that connects all employees, enhances your professional image, and ensures you never miss a call or opportunity.
+        .hero__cta
+          a.btn.btn--primary(href="#contact") Get Your One Number Today
+          a.btn.btn--light(href="#features") Explore Features
+      .hero__media
+        +img("one-number.png", 'Spotlight', 'hero__image', false)

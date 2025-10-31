@@ -65,9 +65,9 @@
 	&__nav {
 		display: flex;
 
-		@include media-breakpoint-up(lg) {
-			margin-top: 10%;
-		}
+		// @include media-breakpoint-up(lg) {
+		// 	margin-top: 10%;
+		// }
 
 
 		&-wrapper {

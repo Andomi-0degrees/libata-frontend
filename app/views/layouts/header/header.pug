@@ -1,16 +1,19 @@
 // Landing Header (static)
 header.header
     .container
-        .header__row
-            a.header__logo(href="/")
-                +img("Logo.svg", 'Logo', 'logo-full', false)
+        .row.align-items-center.header__row
+            .col-6.col-md-2
+                a.header__logo(href="/")
+                    +img("Logo.svg", 'Logo', 'logo-full', false)
 
-            nav.header__nav
-                a.header__link(href="#features") Features
-                a.header__link(href="#how") How It Works
-                a.header__link(href="#pricing") Pricing
-                a.header__link(href="#contact") Contact
+            .col-12.col-md-7
+                nav.header__nav
+                    a.header__link(href="#features") Features
+                    a.header__link(href="#how") How It Works
+                    a.header__link(href="#pricing") Pricing
+                    a.header__link(href="#contact") Contact
 
-            .header__actions
-                a.btn.btn--ghost(href="#") Recharge
-                a.btn.btn--dark(href="#") Login
+            .col-12.col-md-3.text-md-end
+                .header__actions
+                    a.btn.btn--ghost(href="#") Recharge
+                    a.btn.btn--dark(href="#") Login

@@ -6,7 +6,7 @@
     color: #1f2937 !important;
   }
   
-  .header__row { display:flex; align-items:center; justify-content:space-between; height:64px; }
+  .header__row { align-items:center; height:64px; }
   .header__logo img { height:28px; }
   .header__nav { display:flex; gap:24px; margin:0; }
   .header__link {
@@ -29,4 +29,4 @@
   .btn--ghost:hover { background:#f8fafc; }
   .btn--dark { background:#1A1F45; color:#fff; }
   .btn--dark:hover { filter:brightness(1.05); }
-  @media (max-width:768px){ .header__nav{display:none;} .header__actions{gap:8px;} }
+  @media (max-width:768px){ .header__actions{gap:8px;} }

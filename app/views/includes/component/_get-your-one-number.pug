@@ -1,0 +1,33 @@
+section.getone
+  .container
+    .getone__row
+      // Left copy
+      .getone__copy
+        h2.getone__title Get Your One Number Today
+        p.getone__desc Fill out the form and our team will reach out to set up your One Number Mobile solution. Typical setup takes under 24 hours.
+        ul.getone__list
+          li Route calls to teams or individuals in seconds
+          li Professional IVR and voicemail‑to‑email
+          li Time‑based rules and failover for reliability
+          li Keep personal numbers private with caller ID masking
+
+      // Right form card
+      .getone__card
+        h3.getone__card-title Request a Call Back
+        form.getone__form(action="#" method="post" novalidate)
+          .getone__grid
+            .getone__group
+              label.getone__label(for="firstName") First Name
+              input#getoneFirst(type="text" name="firstName" placeholder="First Name")
+            .getone__group
+              label.getone__label(for="lastName") Last Name
+              input#getoneLast(type="text" name="lastName" placeholder="Last Name")
+          .getone__group
+            label.getone__label(for="email") Email
+            input#getoneEmail(type="email" name="email" placeholder="you@example.com")
+          .getone__group
+            label.getone__label(for="phone") Contact Number
+            input#getonePhone(type="tel" name="phone" placeholder="+971 55 123 4567")
+          button.btn.btn--primary(type="submit") Submit
+          p.getone__note By submitting, you agree to be contacted about One Number Mobile. We respect your privacy.
+

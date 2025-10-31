@@ -1,253 +1,63 @@
-
 @font-face {
-    font-family: 'Amandine';
-    src: url('/assets/fonts/Amandine-Medium.woff2') format('woff2'),
-        url('/assets/fonts/Amandine-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Amandine';
-    src: url('/assets/fonts/Amandine-Regular.woff2') format('woff2'),
-        url('/assets/fonts/Amandine-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Amandine';
-    src: url('/assets/fonts/Amandine-MediumItalic.woff2') format('woff2'),
-        url('/assets/fonts/Amandine-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-Black.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-BlackItalic.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-Bold.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-BoldItalic.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-ExtraBold.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-ExtraBold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-ExtraBoldItalic.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-ExtraBoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-Heavy.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-Heavy.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-HeavyItalic.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-HeavyItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-Light.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-LightItalic.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-Medium.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-MediumItalic.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-Regular.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-SemiBold.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy-RegularItalic';
-    src: url('/assets/fonts/Gilroy-RegularItalic.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-RegularItalic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-SemiBoldItalic.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-SemiBoldItalic.woff') format('woff');
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-Thin.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-UltraLight.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-UltraLight.woff') format('woff');
+    font-family: 'Tajawal';
+    src: url('/assets/fonts/Tajawal-ExtraLight.woff2') format('woff2'),
+        url('/assets/fonts/Tajawal-ExtraLight.woff') format('woff');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-ThinItalic.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-ThinItalic.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Amandine';
-    src: url('/assets/fonts/Amandine-Bold.woff2') format('woff2'),
-        url('/assets/fonts/Amandine-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('/assets/fonts/Gilroy-UltraLightItalic.woff2') format('woff2'),
-        url('/assets/fonts/Gilroy-UltraLightItalic.woff') format('woff');
-    font-weight: 200;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Amandine';
-    src: url('/assets/fonts/Amandine-BoldItalic.woff2') format('woff2'),
-        url('/assets/fonts/Amandine-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Amandine';
-    src: url('/assets/fonts/Amandine-Italic.woff2') format('woff2'),
-        url('/assets/fonts/Amandine-Italic.woff') format('woff');
+    font-family: 'Tajawal';
+    src: url('/assets/fonts/Tajawal-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Tajawal-Regular.woff') format('woff');
     font-weight: normal;
-    font-style: italic;
+    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Amandine';
-    src: url('/assets/fonts/Amandine-Light.woff2') format('woff2'),
-        url('/assets/fonts/Amandine-Light.woff') format('woff');
+    font-family: 'Tajawal';
+    src: url('/assets/fonts/Tajawal-Black.woff2') format('woff2'),
+        url('/assets/fonts/Tajawal-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('/assets/fonts/Tajawal-Light.woff2') format('woff2'),
+        url('/assets/fonts/Tajawal-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Amandine';
-    src: url('/assets/fonts/Amandine-LightItalic.woff2') format('woff2'),
-        url('/assets/fonts/Amandine-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
+    font-family: 'Tajawal';
+    src: url('/assets/fonts/Tajawal-ExtraBold.woff2') format('woff2'),
+        url('/assets/fonts/Tajawal-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('/assets/fonts/Tajawal-Bold.woff2') format('woff2'),
+        url('/assets/fonts/Tajawal-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('/assets/fonts/Tajawal-Medium.woff2') format('woff2'),
+        url('/assets/fonts/Tajawal-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
     font-display: swap;
 }
 

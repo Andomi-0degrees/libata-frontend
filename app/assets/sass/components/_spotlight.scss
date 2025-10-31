@@ -1,4 +1,148 @@
 .spotlight {
+	min-height: 100dvh;
+	display: flex;
+	align-items: center;
+	// margin-top: -140px;
+	position: relative;
+
+
+
+
+	.typography-heading-white {
+		@include media-breakpoint-down(lg) {
+			text-align: center;
+		}
+	}
+
+	&--inner {
+		// min-height: 703px;
+		// min-height: 703px;
+		min-height: 100%;
+		aspect-ratio: 1440 / 703;
+
+		@include media-breakpoint-down(lg) {
+			aspect-ratio: unset;
+			min-height: 100dvh;
+			width: 100%;
+		}
+
+		.spotlight__slide {
+			min-height: 100dvh;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 300px; // covers only top part
+			background: linear-gradient(to bottom,
+					rgba(0, 0, 0, 0.45) 0%, // darker at very top
+					rgba(0, 0, 0, 0.25) 70%, // soft mid
+					rgba(255, 255, 255, 0) 100% // fade to transparent
+				);
+			pointer-events: none;
+			z-index: 1;
+		}
+	}
+
+	&__slider {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__slide {
+		position: relative;
+		display: flex;
+		align-items: center;
+		min-height: 100dvh;
+	}
+
+	&__pagination {
+		position: absolute;
+		// left: 50%;
+		bottom: 24px;
+		// transform: translateX(-50%);
+		z-index: 3;
+
+		
+
+		.swiper-pagination-bullet {
+			background: #ffffff;
+			opacity: 0.6;
+		}
+
+		.swiper-pagination-bullet-active {
+			opacity: 1;
+		}
+		@include media-breakpoint-down(lg) {
+			bottom: 40px!important;
+		}
+	}
+
+	&-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+			@include media-breakpoint-down(lg) {
+			object-position: 43%;
+		}
+		// filter: brightness(0.7);
+	}
+
+	&-logo {
+		height: 100%;
+		margin: auto;
+		width: 100%;
+		max-width: 443px;
+
+		@include media-breakpoint-down(lg) {
+			max-width: 450px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 16px;
+
+		@include media-breakpoint-down(lg) {
+			text-align: center;
+		}
+	}
+
+	&__lead {
+		margin: 8px 0;
+		max-width: 920px;
+
+		@include media-breakpoint-down(lg) {
+			text-align: center;
+		}
+
+	}
+
+	&__rule {
+		display: inline-block;
+		width: 32px;
+		height: 2px;
+		background-color: #fff;
+		margin-top: 24px;
+
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+	}
 }
 
+.animate-colors {
+	color: #292929;
+}
 
+.animate-colors.white-section {
+	color: #e5e5e5;
+}

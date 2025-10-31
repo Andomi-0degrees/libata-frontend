@@ -1,4 +1,139 @@
 .footer {
+	background-color: #1F2A45;
+	padding: 20px 0;
+
+
+
+	@include media-breakpoint-down(md) {
+		padding: 50px 0 80px 0;
+	}
+
+	@include media-breakpoint-down(lg) {
+		padding-bottom: 70px;
+
+		.row.justify-content-between {
+			gap: 24px;
+		}
+	}
+
+	.copywright {
+		@include media-breakpoint-down(md) {
+			text-align: left;
+			width: 100%;
+			margin-bottom: 0px; // space before registration line on mobile
+
+			.reserved {
+				margin-bottom: 24px;
+				display: block;
+			}
+		}
+
+
+
+	}
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	&__separator {
+		width: 1px;
+		height: 20px;
+		background-color: #FFFFFF;
+		margin: 0 20px;
+	}
+
+	&__links {
+		display: flex;
+		gap: 32px;
+		white-space: nowrap;
+
+		@include media-breakpoint-down(md) {
+			width: 100%;
+		}
+
+	}
+
+	&__linkedin {
+		display: inline-block;
+		text-decoration: none;
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__linkedin-icon {
+		width: 24px;
+		height: 24px;
+		// filter: brightness(0) invert(1); // Makes the SVG white on dark bg
+	}
+
+	// Responsive adjustments
+	@include media-breakpoint-down(md) {
+		.row {
+			flex-direction: column;
+			gap: 28px; // increase vertical rhythm to match mobile comp
+			text-align: left;
+			align-items: flex-start;
+		}
+
+		&__separator {
+			display: none;
+		}
+
+		// Text links group (Privacy, Terms)
+		.footer__links {
+			gap: 40px;
+		}
+
+		// Space below links before LinkedIn icon
+		.footer__linkedin {
+			margin-top: 12px;
+		}
+	}
+
+	.footer__linkedin-blue {
+		display: none;
+	}
 }
 
+// Contact page specific footer style
+.page-blue {
+	// .header {
+	// 	position: relative;
+	// }
 
+	.footer {
+		background-color: #FFFFFF;
+
+		p,
+		.typography-footer-white,
+		a {
+			color: #1F2A45 !important;
+
+		}
+
+		.footer__separator {
+			background-color: #1F2A45;
+		}
+
+		.footer__linkedin {
+			display: none;
+		}
+
+		.footer__linkedin-blue {
+			display: block;
+		}
+	}
+
+}

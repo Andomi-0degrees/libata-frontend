@@ -145,15 +145,38 @@ function sprite() {
   return spriteData.pipe(dest(paths.assets));
 }
 
-/* Pug Tasks - disabled (we now ship static HTML) */
+/* Pug Tasks */
+
 function compilePug(prod, lang) {
-  return src([], { allowEmpty: true });
+  return src(`${paths.views}/*.pug`, { allowEmpty: true })
+    .pipe(
+      pugModule({
+        data: {
+          prod: prod,
+          lang: lang,
+          paths: relativePaths,
+          version: version,
+        },
+        pretty: true,
+      })
+    )
+    .on("error", notifyModule.onError(errorFunction))
+    .pipe(dest(`${paths.app}/${lang}`))
+    .pipe(browserSync.stream({ once: true }));
 }
 
-const pugDevEn = (done) => done();
-const pugDevAr = (done) => done();
-const pugProdEn = (done) => done();
-const pugProdAr = (done) => done();
+const pugDevEn = () => {
+  return compilePug(false, "en");
+};
+const pugDevAr = (done) => {
+  return disableArabic ? done() : compilePug(false, "ar");
+};
+const pugProdEn = () => {
+  return compilePug(true, "en");
+};
+const pugProdAr = (done) => {
+  return disableArabic ? done() : compilePug(true, "ar");
+};
 
 /* Sass / Css Tasks */
 
@@ -250,7 +273,10 @@ function jsMinify() {
 const watchSass = function () {
   watch(`${paths.sass}/**/*.scss`, sassDev);
 };
-const watchPug = function () { };
+const watchPug = function () {
+  // watch(`${paths.views}/**/*.pug`, [pugDev, sassDev]); old version before 4
+  watch(`${paths.views}/**/*.pug`, gulp.series(pugDev, sassDev));
+};
 const watchJs = function () {
   watch(`${paths.jsCore}/*.js`, jsDev);
 };
@@ -327,14 +353,14 @@ function server() {
       baseDir: paths.app,
       directory: true,
     },
-    startPath: `${dirName.en}/index.html`,
+    startPath: `${dirName.en}/home.html`,
   });
 }
 
 // private tasks
-// Disable pug in dev/prod
-const pugDev = parallel(pugDevEn);
-const pugProd = parallel(pugProdEn);
+// const pugDev = parallel(pugDevEn); // disable ar to decrease processing time
+const pugDev = parallel(pugDevEn, pugDevAr);
+const pugProd = parallel(pugProdEn, pugProdAr);
 const jsDev = series(jsBabel);
 const jsProd = series(jsBabel, jsConcat, jsMinify);
 const sassDev = series(sass, rtlcss);
@@ -349,14 +375,14 @@ exports.cleanAll = parallel(
   clean.cleanDist,
   clean.cleanPackage
 );
-exports.watchAll = parallel(watchSass, watchJs, watchSprites);
+exports.watchAll = parallel(watchPug, watchSass, watchJs, watchSprites);
 exports.runDev = series(
   parallel(exports.cleanAll, sprite),
-  parallel(sassDev, jsDev)
+  parallel(pugDev, sassDev, jsDev)
 );
 exports.runProd = series(
   parallel(exports.cleanAll, sprite),
-  parallel(sassProd, jsProd)
+  parallel(pugProd, sassProd, jsProd)
 );
 exports.startDev = series(exports.runDev, parallel(server, exports.watchAll));
 exports.packageDev = series(exports.runDev, dist, packageTask, clean.cleanDist);

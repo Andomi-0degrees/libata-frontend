@@ -18,7 +18,7 @@
 	--black: #000;
 	--cyan: #1795c8;
 	--headerHeight: 90px;
-	--toolsHeight : 350px;
+	// --toolsHeight : 350px;
 }
 
 @include media-breakpoint-down(xl) {
@@ -64,7 +64,7 @@ body {
 }
 
 main {
-	// margin-top: -114px;
+	margin-top: -114px;
 
 	// @include media-breakpoint-down(lg) {
 	// 	margin-top: 0px;

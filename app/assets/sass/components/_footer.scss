@@ -1,139 +1,35 @@
 .footer {
-	background-color: #1F2A45;
-	padding: 20px 0;
-
-
-
-	@include media-breakpoint-down(md) {
-		padding: 50px 0 80px 0;
-	}
-
-	@include media-breakpoint-down(lg) {
-		padding-bottom: 70px;
-
-		.row.justify-content-between {
-			gap: 24px;
-		}
-	}
-
-	.copywright {
-		@include media-breakpoint-down(md) {
-			text-align: left;
-			width: 100%;
-			margin-bottom: 0px; // space before registration line on mobile
-
-			.reserved {
-				margin-bottom: 24px;
-				display: block;
-			}
-		}
-
-
-
-	}
-
-	a {
-		text-decoration: none;
-
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-
-	p {
-		margin-bottom: 0;
-	}
-
-	&__separator {
-		width: 1px;
-		height: 20px;
-		background-color: #FFFFFF;
-		margin: 0 20px;
-	}
-
-	&__links {
-		display: flex;
-		gap: 32px;
-		white-space: nowrap;
-
-		@include media-breakpoint-down(md) {
-			width: 100%;
-		}
-
-	}
-
-	&__linkedin {
-		display: inline-block;
-		text-decoration: none;
-		transition: opacity 0.3s ease;
-
-		&:hover {
-			opacity: 0.8;
-		}
-	}
-
-	&__linkedin-icon {
-		width: 24px;
-		height: 24px;
-		// filter: brightness(0) invert(1); // Makes the SVG white on dark bg
-	}
-
-	// Responsive adjustments
-	@include media-breakpoint-down(md) {
-		.row {
-			flex-direction: column;
-			gap: 28px; // increase vertical rhythm to match mobile comp
-			text-align: left;
-			align-items: flex-start;
-		}
-
-		&__separator {
-			display: none;
-		}
-
-		// Text links group (Privacy, Terms)
-		.footer__links {
-			gap: 40px;
-		}
-
-		// Space below links before LinkedIn icon
-		.footer__linkedin {
-			margin-top: 12px;
-		}
-	}
-
-	.footer__linkedin-blue {
-		display: none;
-	}
+  background: #fff;
+  padding: 32px 0 20px;
+  color: #1A1F45;
+  border-top: 1px solid #e6eef7;
 }
 
-// Contact page specific footer style
-.page-blue {
-	// .header {
-	// 	position: relative;
-	// }
+.footer__top { display: grid; grid-template-columns: 240px 1fr; gap: 32px; align-items: start; }
+.footer__logo { height: 36px; width: auto; }
 
-	.footer {
-		background-color: #FFFFFF;
+.footer__cols { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; }
+.footer__heading { font-family: $font-primary; font-weight: 700; font-size: 14px; color: #1A1F45; margin: 0 0 10px; }
+.footer__list { margin: 0; padding-left: 0; list-style: none; }
+.footer__list a { text-decoration: none; color: #0194F6; font-family: $font-primary; font-weight: 500; font-size: 14px; line-height: 160%; }
+.footer__list a:hover { text-decoration: underline; }
 
-		p,
-		.typography-footer-white,
-		a {
-			color: #1F2A45 !important;
+.footer__bottom { display: grid; grid-template-columns: 1fr 2fr auto; gap: 16px; align-items: center; margin-top: 24px; }
+.footer__copy { margin: 0; font-family: $font-primary; font-size: 13px; color: #1A1F45; }
+.footer__legal { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.footer__legal a { color: #0194F6; text-decoration: none; font-family: $font-primary; font-size: 13px; }
+.footer__legal .separator { color: #90a4b8; }
 
-		}
+.footer__social { display: flex; gap: 10px; justify-content: flex-end; }
+.fa-btn { width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: #0194F6; color: #fff; text-decoration: none; }
+.fa-btn:hover { filter: brightness(1.05); }
 
-		.footer__separator {
-			background-color: #1F2A45;
-		}
+@media (max-width: 992px) {
+  .footer__top { grid-template-columns: 1fr; }
+  .footer__cols { grid-template-columns: repeat(3, 1fr); }
+  .footer__bottom { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+}
 
-		.footer__linkedin {
-			display: none;
-		}
-
-		.footer__linkedin-blue {
-			display: block;
-		}
-	}
-
+@media (max-width: 600px) {
+  .footer__cols { grid-template-columns: repeat(2, 1fr); }
 }

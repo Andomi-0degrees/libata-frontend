@@ -1,18 +1,70 @@
 footer.footer
-	.container
-		.row.justify-content-between
-			.col-12.col-lg-auto
-				.d-flex.flex-column.flex-lg-row.align-items-lg-center
-					p.typography-footer-white.copywright
-						span.reserved © Tariq Al Futtaim. All rights reserved.
-						span.d-none.d-md-inline.pl-2.pr-2 |
-						//- span.d-md-inline.d-block Registered Foundation – <br class="d-md-none d-block">Dubai International Financial Centre
-						a(href="privacy-policy.html").typography-footer-white.pr-20 Privacy Policy 
-						a(href="terms-of-service.html").typography-footer-white Terms of Use
-			//- .col-12.col-md-4.footer__links.justify-content-lg-between
-			.col-auto
-				a(href="https://www.linkedin.com/company/tariq-al-futtaim-family-office", target="_blank").footer__linkedin
-					+img("linkedin.svg", 'LinkedIn', 'footer__linkedin-icon', false)
-				a(href="https://www.linkedin.com/company/tariq-al-futtaim-family-office", target="_blank").footer__linkedin-blue
-					+img("linkedin-blue.svg", 'LinkedIn', 'footer__linkedin-icon', false)
+  .container
+    .footer__top
+      .footer__brand
+        +img("Logo.svg", 'Logo', 'footer__logo', false)
 
+      .footer__cols
+        .footer__col
+          h4.footer__heading App
+          ul.footer__list
+            li: a(href="#") IOS
+            li: a(href="#") Android
+
+        .footer__col
+          h4.footer__heading Plans
+          ul.footer__list
+            li: a(href="#") Prepaid
+            li: a(href="#") Postpaid
+
+        .footer__col
+          h4.footer__heading Products
+          ul.footer__list
+            li: a(href="#") Bundles
+            li: a(href="#") Special Services
+            li: a(href="#") Entertainment
+            li: a(href="#") Shop
+
+        .footer__col
+          h4.footer__heading Rates
+          ul.footer__list
+            li: a(href="#") International Rate
+            li: a(href="#") Roaming Rates
+
+        .footer__col
+          h4.footer__heading Support
+          ul.footer__list
+            li: a(href="#") Tips and Guides
+            li: a(href="#") Raise a Complaint
+            li: a(href="#") Protection channel
+            li: a(href="#") Shop Finder
+            li: a(href="#") Contact Channels
+
+        .footer__col
+          h4.footer__heading About Lebara
+          ul.footer__list
+            li: a(href="#") Who We Are
+            li: a(href="#") Our Values
+            li: a(href="#") Careers
+
+    .footer__bottom
+      p.footer__copy © 2025 Lebara. All rights reserved.
+      .footer__legal
+        a(href="#") Privacy Policy
+        span.separator |
+        a(href="#") Terms and Conditions
+        span.separator |
+        a(href="#") Customers Rights and Responsibilities
+        span.separator |
+        a(href="#") Regulations for Curbing SPAM Messages & Calls
+      .footer__social
+        a(href="#" aria-label="Facebook").fa-btn
+          i.fa-brands.fa-facebook-f
+        a(href="#" aria-label="Twitter").fa-btn
+          i.fa-brands.fa-x-twitter
+        a(href="#" aria-label="Instagram").fa-btn
+          i.fa-brands.fa-instagram
+        a(href="#" aria-label="YouTube").fa-btn
+          i.fa-brands.fa-youtube
+        a(href="#" aria-label="WhatsApp").fa-btn
+          i.fa-brands.fa-whatsapp

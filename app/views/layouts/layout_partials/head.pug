@@ -1,0 +1,115 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no")
+link(rel="shortcut icon" href=`${paths.img}/icons/favicon.ico` type="image/x-icon")
+//- Global visual theming (can be overridden per page via theme_color)
+meta(name="theme-color" content=(typeof theme_color !== 'undefined' ? theme_color : '#ffffff'))
+
+block pageTitle
+if lang=="en"
+	title #{title_en}
+	meta(name="description" content=desc_en)
+	//- Extra SEO meta
+	meta(name="keywords" content=(typeof keywords_en !== 'undefined' ? keywords_en : ''))
+	meta(name="author" content=(typeof author !== 'undefined' ? author : ''))
+	meta(property="og:title" content=title_en)
+	meta(property="og:description" content=desc_en)
+	meta(property="og:type" content="website")
+	meta(property="og:url" content=link_en)
+	meta(property="og:locale" content="en_US")
+	//- Canonical and hreflang
+	if link_en
+		link(rel="canonical" href=link_en)
+		link(rel="alternate" hreflang="en" href=link_en)
+		if link_ar
+			link(rel="alternate" hreflang="ar" href=link_ar)
+			link(rel="alternate" hreflang="x-default" href=link_en)
+	//- Locale alternates for OG
+	meta(property="og:locale:alternate" content="ar_AR")
+	meta(property="twitter:card" content="summary_large_image")
+	meta(property="twitter:url" content=link_en)
+	//- Social sharing images
+	meta(name="twitter:image" content=(typeof img_en !== 'undefined' ? img_en : ''))
+	meta(property="og:image" content=(typeof img_en !== 'undefined' ? img_en : ''))
+	meta(itemprop="image" content=(typeof img_en !== 'undefined' ? img_en : ''))
+	if typeof img_alt_en !== 'undefined'
+		meta(property="og:image:alt" content=img_alt_en)
+		meta(name="twitter:image:alt" content=img_alt_en)
+	//- Twitter account attribution
+	if typeof twitter_site !== 'undefined'
+		meta(name="twitter:site" content=twitter_site)
+	if typeof twitter_creator !== 'undefined'
+		meta(name="twitter:creator" content=twitter_creator)
+	meta(property="og:site_name" content=title_en)
+	meta(name="twitter:title" content=title_en)
+	meta(name="twitter:description" content=desc_en)
+else
+	title #{title_ar}
+	meta(name="description" content=desc_ar)
+	//- Extra SEO meta
+	meta(name="keywords" content=(typeof keywords_ar !== 'undefined' ? keywords_ar : ''))
+	meta(name="author" content=(typeof author !== 'undefined' ? author : ''))
+	meta(property="og:title" content=title_ar)
+	meta(property="og:description" content=desc_ar)
+	meta(property="og:type" content="website")
+	meta(property="og:url" content=link_ar)
+	meta(property="og:locale" content="ar_AR")
+	//- Canonical and hreflang
+	if link_ar
+		link(rel="canonical" href=link_ar)
+		link(rel="alternate" hreflang="ar" href=link_ar)
+		if link_en
+			link(rel="alternate" hreflang="en" href=link_en)
+			link(rel="alternate" hreflang="x-default" href=link_en)
+	//- Locale alternates for OG
+	meta(property="og:locale:alternate" content="en_US")
+	meta(property="twitter:card" content="summary_large_image")
+	meta(property="twitter:url" content=link_ar)
+	//- Social sharing images
+	meta(name="twitter:image" content=(typeof img_ar !== 'undefined' ? img_ar : ''))
+	meta(property="og:image" content=(typeof img_ar !== 'undefined' ? img_ar : ''))
+	meta(itemprop="image" content=(typeof img_ar !== 'undefined' ? img_ar : ''))
+	if typeof img_alt_ar !== 'undefined'
+		meta(property="og:image:alt" content=img_alt_ar)
+		meta(name="twitter:image:alt" content=img_alt_ar)
+	//- Twitter account attribution
+	if typeof twitter_site !== 'undefined'
+		meta(name="twitter:site" content=twitter_site)
+	if typeof twitter_creator !== 'undefined'
+		meta(name="twitter:creator" content=twitter_creator)
+	meta(property="og:site_name" content=title_ar)
+	meta(name="twitter:title" content=title_ar)
+	meta(name="twitter:description" content=desc_ar)
+
+//- Robots meta directives
+if prod
+	meta(name="robots" content="index,follow")
+else
+	meta(name="robots" content="noindex,nofollow")
+
+if prod
+	if lang=="en"
+		link(rel="stylesheet" href=`${paths.css}/style.min.css?v=${version}`)
+	else
+		link(rel="stylesheet" href=`${paths.css}/style-ar.min.css?v=${version}`)
+else
+	if lang=="en"
+		link(rel="stylesheet" href=`${paths.css}/style.css?v=${version}`)
+		//- link(rel="stylesheet" href=`${paths.css}/color-blind.css?v=${version}`)
+	else
+		link(rel="stylesheet" href=`${paths.css}/style-ar.css?v=${version}`)
+//- Using CDN to ensure intl-tel-input base styles are available
+link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.20/css/intlTelInput.css")
+include ../../includes/_mixins/_index.pug
+//- <link rel="preload" href="../assets/fonts/Seravek-ExtraLight.woff2" as="font" type="font/woff2" crossorigin>
+
+if lang === 'ar'
+	//- include google-translate.pug
+
+// Global site tag (gtag.js) - Google Analytics
+//- script(async="" src="https://www.googletagmanager.com/gtag/js?id=G-5C30KTTL9P")
+//- script.
+//- 	window.dataLayer = window.dataLayer || [];
+//- 	function gtag(){dataLayer.push(arguments);}
+//- 	gtag("js", new Date());
+//- 	gtag("config", "G-5C30KTTL9P");s

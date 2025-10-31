@@ -1,0 +1,32 @@
+extends layouts/layout.pug
+
+block pageTitle
+	- var title_en="TARIQ AL FUTTAIM | What We Do"
+	- var desc_en="We invest with discipline across strategic sectors, with a core focus on UAE real estate and long-term value creation."
+	- var keywords_en="Tariq Al Futtaim, what we do, strategy, investments, real estate, UAE"
+	- var title_ar="طارق الفطيم | ماذا نفعل"
+	- var desc_ar="نستثمر بانضباط عبر قطاعات استراتيجية مع تركيز أساسي على العقارات في دولة الإمارات وبناء قيمة طويلة الأمد."
+	- var keywords_ar="طارق الفطيم, ماذا نفعل, استراتيجية, استثمارات, عقارات, الإمارات"
+	- var __base = (typeof siteUrl !== 'undefined' ? siteUrl : 'http://localhost:3000')
+	- var link_en = __base + '/en/what-we-do.html'
+	- var link_ar = __base + '/ar/what-we-do.html'
+	- var img_en = __base + '/assets/images/strategic-focus.png'
+	- var img_alt_en="Strategic focus — real estate and long-term view"
+	- var img_ar = __base + '/assets/images/strategic-focus.png'
+	- var img_alt_ar="تركيز استراتيجي — عقارات ورؤية طويلة"
+	- var author = "TARIQ AL FUTTAIM"
+	- var theme_color = "#0b2441"
+
+block content
+	include includes/pages/_what-we-dospotlight-inner.pug
+
+	// Appart image + text section
+	include includes/pages/_what-we-appart-section.pug
+
+	// Heritage section
+	include includes/pages/_what-we-heritage-section.pug
+	include includes/pages/_what-we-sectors-of-focus.pug
+
+	include includes/pages/_our-guiding-principles.pug
+	// Strategic Focus banner
+	include includes/pages/_what-we-strategic-focus.pug

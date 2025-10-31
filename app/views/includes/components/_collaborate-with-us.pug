@@ -1,0 +1,30 @@
+-
+  var collaborate = [
+    {
+      title: "Investment and co-investment"
+    },
+    {
+      title: "Development and design partnerships"
+    },
+    {
+      title: "Governance and advisory"
+    },
+    {
+      title: "Institutional media"
+    },
+  ]
+
+section.section#contact
+  .container
+    .row
+      div(class="grid grid-cols-8 lg:grid-cols-12 lg:gap-4")
+        div(class="flex flex-col justify-between col-span-8 lg:col-span-5")
+          div(class=("flex flex-col gap-6"))
+            +heading("Let’s build with intent.", "h5", "h5 font-blue m-0")
+            +heading("We welcome aligned conversations in:", "h2", "h2 m-0")
+          +link("mailto:contact@tariqalfuttaim.ae","contact@tariqalfuttaim.ae","mt-40 lg:mt-0 underline")
+        div(class="flex flex-col col-span-8 lg:col-span-5 lg:col-start-8 gap-10 lg:gap-[48px] justify-center mt-[66px] lg:mt-0")
+          each data in collaborate
+            .line.line-image.pb-24
+              +heading(data.title, "h5", "!text-xl !font-normal image-text m-0")
+

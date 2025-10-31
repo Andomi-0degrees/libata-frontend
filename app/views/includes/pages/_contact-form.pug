@@ -1,0 +1,145 @@
+section.section.contact-page
+  .container
+    .row.justify-content-center
+      .col-lg-12
+        .contact-form-wrapper
+          .getInTouch
+            h2.heading-text Get In Touch
+            p.desc Please use the below form to contact us.
+          .career
+            h2.heading-text Career
+            p.desc Please use the below form to contact us.
+          .investment
+            h2.heading-text Investment
+            p.desc Please use the below form to contact us. 
+          .press
+            h2.heading-text Press
+            p.desc Please use the below form to contact us.
+          .charity
+            h2.heading-text Charity
+            p.desc Please use the below form to contact us.
+          form#contactForm.contact-form(action="#" method="post" enctype="multipart/form-data" novalidate)
+            .form-group
+              label.form-group__label(for="enquiryType") Type of Enquiry*
+              // Custom dropdown UI replacing native select (hidden input used for form value)
+              .custom-dropdown#customEnquiry
+                .dropdown-selected Get In Touch
+                .dropdown-options
+                  .dropdown-option(data-value="career") Career
+                  .dropdown-option(data-value="investment") Investment
+                  .dropdown-option(data-value="press") Press
+                  .dropdown-option(data-value="charity") Charity
+                input#enquiryType(type="hidden" name="enquiryType" required)
+
+            // Career-only fields (shown when enquiryType == "career")
+            .career-only
+              h3.form-section-title Employment Details
+              .form-row.row
+                .col-md-6
+                  .form-group
+                    label.form-group__label(for="linkedinUrl") LinkedIn Profile URL*
+                    input#linkedinUrl.form-control(type="url" name="linkedinUrl" placeholder="https://linkedin.com/in/yourprofile")
+                .col-md-6
+                  .form-group.form-control_for-upload
+                    label.form-group__label(for="cvFile") Resume Upload 
+                      small (PDF/Word, max 2MB)
+                    .form-control.border-b-0
+                      // Dropzone-style uploader (with inline preview)
+                      .file-drop#cvDropzone(tabindex="0" role="button" aria-label="Upload resume" aria-describedby="cvHelp")
+                        input#cvFile(type="file" name="cvFile" accept=".pdf,.doc,.docx" hidden)
+                        .file-drop__placeholder
+                          span Click to upload
+                        // preview (single file) shown inside dropzone
+                        .file-drop__preview
+                          ul#cvFileList.file-list
+                      //- small#cvHelp.file-note File should not exceed 2 MB. PDF/DOC/DOCX only.
+
+            // investment-only fields (shown when enquiryType == "investment")
+            .investment-only
+              h3.form-section-title Investment  Details
+              .form-row.row.gx-5.align-items-end
+                .col-md-12
+                  .form-group
+                    label.form-group__label Upload Investment Proposition
+                    .form-control.form-control_for-upload.border-b-0
+                      .file-drop#investmentDrop(tabindex="0" role="button" aria-label="Upload investment files" aria-describedby="investmentHelp")
+                        input#preProposalFile(type="file" name="preProposalFile" accept=".pdf,.doc,.docx,.xls,.xlsx" multiple hidden)
+                        .file-drop__placeholder
+                          span Click to upload
+                      .file-drop__preview
+                        ul#investmentFileList.file-list
+                      small#investmentHelp.file-note Multiple files allowed. Each file up to 5 MB. PDF/DOC/DOCX/XLS/XLSX only. Max total 5 MB.
+
+            .form-row.row.gx-5
+              .col-md-6
+                .form-group
+                  label.form-group__label(for="fullName") Full Name*
+                  input#fullName.form-control(type="text" name="fullName" placeholder="Enter Your Full Name" required)
+              .col-md-6
+                 .form-group
+                    label.form-group__label(for="countryOption") Country*
+                    // Custom dropdown for Country matching theme
+                    .custom-dropdown#customCountry
+                      .dropdown-selected Select Your Country
+                      .dropdown-options
+                        .dropdown-option(data-value="Dubai") Dubai
+                        .dropdown-option(data-value="Abu Dhabi") Abu Dhabi
+                        .dropdown-option(data-value="Sharjah") Sharjah
+                        .dropdown-option(data-value="Ajman") Ajman
+                        .dropdown-option(data-value="Ras Al Khaimah") Ras Al Khaimah
+                        .dropdown-option(data-value="Fujairah") Fujairah
+                        .dropdown-option(data-value="Umm Al Quwain") Umm Al Quwain
+                        .dropdown-option(data-value="support") Support
+                        .dropdown-option(data-value="sales") Sales
+                      input#countryOption(type="hidden" name="countryOption" required)
+
+            .form-row.row.gx-5
+              .col-md-6
+                .form-group
+                  label.form-group__label(for="contactNumber") Contact Number*
+                  // Visible input for user, different name; CMS will read hidden field below
+                  input#contactNumber.form-control(type="tel" name="contactNumberView" placeholder="Enter Your Contact Number" inputmode="numeric" pattern="\\d*" maxlength="15" required)
+                  // Hidden field sent to CMS containing full number with country code
+                  input#contactNumberHidden(type="hidden" name="contactNumber")
+              .col-md-6
+                .form-group
+                  label.form-group__label(for="email") Email*
+                  input#email.form-control(type="email" name="email" placeholder="Enter Your Email Address" required)
+
+            .col-12
+              .form-group
+                label.form-group__label(for="message") Message*
+                textarea#message.form-control(name="message" rows="1" placeholder="Enter Your Message" maxlength="500" required)
+
+                small.char-count 0/500
+
+            .row.justify-content-between.mt-40
+              .col-12.col-md-10
+                p.desc By clicking submit, you agree to
+                  |  
+                  a(href=(lang==='ar' ? '/ar/terms-of-service' : '/en/terms-of-service') title='Terms & Conditions' class='underline') Terms & Conditions
+              .col-12.col-md-2
+                .text-lg-right
+                  button.btn.btn-submit(type="submit") Submit
+
+          // Full-screen loader overlay (hidden by default; toggled via JS)
+          .screen-loader(aria-hidden="true" role="status")
+            .screen-loader__spinner
+
+
+          // Thank You modal (hidden by default; show by adding .open)
+          #thankYouModal.thankyou-modal(role="dialog" aria-labelledby="thankYouTitle" aria-modal="true" aria-describedby="thankYouDesc")
+            .thankyou-modal__content
+              button.thankyou-modal__close(type="button" aria-label="Close") ×
+              .thankyou-modal__body
+                h3#thankYouTitle Thank you
+                p#thankYouDesc Your submission has been received. We will get back to you soon.
+                button.thankyou-modal__ok(type="button") OK
+          // Error modal (hidden by default; show by adding .open)
+          #errorModal.thankyou-modal.error(role='dialog' aria-labelledby='errorTitle' aria-modal='true' aria-describedby='errorDesc')
+            .thankyou-modal__content
+              button.thankyou-modal__close(type='button' aria-label='Close') &times;
+              .thankyou-modal__body
+                h3#errorTitle Submission failed
+                p#errorDesc Something went wrong. Please try again.
+                button.thankyou-modal__ok(type='button') OK

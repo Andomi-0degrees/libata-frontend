@@ -1,0 +1,11 @@
+# robots.txt for TARIQ AL FUTTAIM
+# Update the Sitemap URL to your live domain
+User-agent: *
+Allow: /
+
+# Block build tooling directories if publicly accessible
+Disallow: /assets/sass/
+Disallow: /assets/js/app/
+Disallow: /views/
+
+Sitemap: https://taf.0degrees.build/sitemap.xml

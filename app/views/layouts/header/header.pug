@@ -1,0 +1,46 @@
+header.header
+	.header__inner
+		.container
+			.row.align-items-center.h-100
+				// Logo on the left side
+				.col-12.col-lg-3
+					.header__wrapper
+						.header__logo
+							a.logo(href="home.html")
+								+img("full-logo.svg", 'Full Logo', 'logo-full', false)
+								+img("circle-logo.svg", 'Circle Logo', 'logo-circle', false)
+						.header__toggle.header__menu.for-desktop
+							+img("toggle.svg", 'Logo', 'toggle', false)
+							+img("close.svg", 'Logo', 'close', false)
+
+
+				// Navigation links in the center
+				.col-4.col-lg-9
+					.header__nav
+						.header__nav-wrapper
+							ul.header__nav-list
+								li.menu-text Menu
+								li.nav-item
+									a.nav-link(href="who-we-are.html") 
+										span Who we are
+										span.active Who we are
+								li.nav-item
+									a.nav-link(href="what-we-do.html")
+										span What we do
+										span.active What we do
+								li.nav-item
+									a.nav-link(href="contact.html")
+										span Contact
+										span.active Contact
+						
+						// Close button for mobile menu
+						.header__nav-close.for-mobile
+							+img("close.svg", 'Close Menu', 'close-icon', false)
+
+	// Mobile footer with toggle
+	.header__mobile-footer.for-mobile
+		.container
+			.row
+				.col-12
+					.header__mobile-toggle
+						+img("toggle.svg", 'Menu Toggle', 'mobile-toggle', false)

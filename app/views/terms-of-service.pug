@@ -1,0 +1,22 @@
+extends layouts/layout.pug
+
+block pageTitle
+	- var title_en="TARIQ AL FUTTAIM | Terms & Conditions"
+	- var desc_en="Read the terms that govern use of the Tariq Al Futtaim website."
+	- var keywords_en="Tariq Al Futtaim, terms, terms and conditions, legal"
+	- var title_ar="طارق الفطيم | الشروط والأحكام"
+	- var desc_ar='اطّلع على الشروط والأحكام الخاصة باستخدام موقع طارق الفطيم.'
+	- var keywords_ar='طارق الفطيم, الشروط والأحكام, قانوني'
+	- var __base = (typeof siteUrl !== 'undefined' ? siteUrl : 'http://localhost:3000')
+	- var link_en = __base + '/en/terms-and-condition.html'
+	- var link_ar = __base + '/ar/terms-and-condition.html'
+	- var img_en = __base + '/assets/images/taf-spotlight.jpg'
+	- var img_alt_en="TARIQ AL FUTTAIM — Terms"
+	- var img_ar = __base + '/assets/images/taf-spotlight.jpg'
+	- var img_alt_ar="طارق الفطيم — الشروط والأحكام"
+	- var author = "TARIQ AL FUTTAIM"
+	- var theme_color = "#0b2441"
+	- var pageClass = 'page-blue'
+
+block content
+	include includes/components/_terms-condition.pug

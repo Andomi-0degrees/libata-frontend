@@ -1,0 +1,22 @@
+extends layouts/layout.pug
+
+block pageTitle
+	- var title_en="TARIQ AL FUTTAIM | Contact"
+	- var desc_en="Connect with TARIQ AL FUTTAIM — we welcome strategic partnerships and opportunities that align with our long-term view."
+	- var keywords_en="Tariq Al Futtaim, contact, partnerships, enquiries, UAE"
+	- var title_ar="طارق الفطيم | اتصل بنا"
+	- var desc_ar="تواصل مع طارق الفطيم — نرحّب بالشراكات والفرص الاستراتيجية التي تتماشى مع رؤيتنا طويلة الأمد."
+	- var keywords_ar="طارق الفطيم, اتصل بنا, شراكات, استفسارات, الإمارات"
+	- var __base = (typeof siteUrl !== 'undefined' ? siteUrl : 'http://localhost:3000')
+	- var link_en = __base + '/en/contact.html'
+	- var link_ar = __base + '/ar/contact.html'
+	- var img_en = __base + '/assets/images/taf-press-image.jpg'
+	- var img_alt_en="Contact TARIQ AL FUTTAIM"
+	- var img_ar = __base + '/assets/images/taf-press-image.jpg'
+	- var img_alt_ar="اتصل بطارق الفطيم"
+	- var author = "TARIQ AL FUTTAIM"
+	- var theme_color = "#0b2441"
+	- var pageClass = 'page-blue'
+
+block content
+	include includes/pages/_contact-form.pug

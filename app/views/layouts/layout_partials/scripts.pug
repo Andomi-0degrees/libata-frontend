@@ -1,0 +1,16 @@
+if prod
+	script(src=`${paths.jsOutput}/app.min.js?v=${version}`)
+else
+	script(src=`${paths.jsJquery}/jquery-3.7.1.min.js?v=${version}`)
+	script(src=`${paths.jsLibs}/swiper-bundle.min.js?v=${version}`)
+	script(src=`${paths.jsLibs}/lazyload.min.js?v=${version}`)
+	script(src=`${paths.jsLibs}/gsap/gsap.min.js?v=${version}`)
+	script(src=`${paths.jsLibs}/gsap/SplitText.min.js`)
+	script(src=`${paths.jsLibs}/gsap/ScrollTrigger.min.js`)
+	//- script(src=`${paths.jsLibs}/gsap/MorphSVGPlugin.min.js?v=${version}`)
+	//- script(src=`${paths.jsLibs}/ion.rangeSlider.min.js?v=${version}`)
+	//- script(src=`${paths.jsLibs}/roundslider.min.js?v=${version}`)
+	script(src=`${paths.jsLibs}/selectize.js?v=${version}`)
+	script(src=`${paths.jsLibs}/jquery.validate.min.js?v=${version}`)
+	script(src=`${paths.jsLibs}/intlTelInput/intlTelInput.min.js?v=${version}`)
+	script(src=`${paths.jsOutput}/default.js?v=${version}`)

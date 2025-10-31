@@ -1,0 +1,162 @@
+.btn {
+    display        : inline-block;
+    background     : $red;
+    border         : 1px solid $red;
+    color          : $white;
+    text-transform : capitalize;
+    text-decoration: none;
+    padding        : 10px 23px;
+    border-radius  : 30px;
+    font-weight: 300;
+    font-size: px(16);
+
+
+    &.disabled{
+        pointer-events: none;
+        opacity: 0.7;
+    }
+
+    @include media-breakpoint-down(lg) {
+        font-size: px(14);
+    }
+
+    &:hover {
+        background  : $blue;
+        border-color: $blue;
+    }
+
+    &--border,&--border-blue {
+        background: transparent;
+        border    : 1px solid $white;
+    }
+    
+    &--border-blue{
+        border-color: $darkBlue;
+        color: $darkBlue;
+        &:hover{
+            color: $white;
+        }
+    }
+
+    &--white {
+        color     : #223647;
+        background: white;
+        border    : 1px solid white;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &--d-blue {
+        background: $darkBlue;
+        border    : 1px solid $darkBlue;
+    }
+
+    &--blue {
+        background: $blue;
+        border    : 1px solid $blue;
+    }
+
+    &--golden {
+        background: $golden;
+        border    : 1px solid $golden;
+    }
+    
+    &--lightGolden {
+        background: $lightGolden;
+        border    : 1px solid $lightGolden;
+    }
+}
+
+.link {
+    color          : $white;
+    text-transform : uppercase;
+    text-decoration: none;
+    padding        : 0 23px;
+    @include media-breakpoint-down(lg) {
+        font-size: px(14);
+    }
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.arrow {
+    &:hover {
+        path {
+            fill: $blue;
+        }
+
+        .arrow__circle {
+            stroke: $blue;
+        }
+    }
+}
+
+.arrow-right{
+    color: $darkBlue;
+    text-decoration: none;
+    &__svg{
+        transform: rotate(180deg);
+    }
+}
+
+.plus-cut-icon {
+    display            : flex;
+    align-items        : center;
+    justify-content    : center;
+    width              : 44px;
+    height             : 81px;
+    background-position: left center;
+    background-repeat  : no-repeat;
+    cursor             : pointer;
+
+    i {
+        position: absolute;
+        left: 13px;
+        top: 28px;
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    &:hover {
+        i {
+            transform: rotate(-90deg);
+        }
+    }
+    &__svg{
+        position: relative;
+        width: 355px;
+        height: 120px;
+        overflow: hidden;
+        svg{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+.btn-play{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: $white;
+    cursor: pointer;
+    &::after{
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 0; 
+        height: 0; 
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;  
+        border-left: 11px solid $darkBlue;
+        transform: translate(-50%, -50%);
+    }
+}

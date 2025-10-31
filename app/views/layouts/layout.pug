@@ -1,0 +1,10 @@
+doctype html
+html(lang=lang)
+	head
+		include layout_partials/head.pug
+	body(class=[lang, typeof pageClass !== 'undefined' ? pageClass : null])
+		include header/header.pug
+		main
+			block content
+		include footer/footer.pug
+		include layout_partials/scripts.pug

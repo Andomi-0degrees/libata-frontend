@@ -1,0 +1,36 @@
+extends layouts/layout.pug
+
+block pageTitle
+	- var title_en="TARIQ AL FUTTAIM | Home"
+	- var desc_en="An Emirati investment platform with a long-term view, shaping enduring value across strategic sectors with a core focus on real estate."
+	- var keywords_en="Tariq Al Futtaim, UAE investments, Emirati investor, long-term view, real estate, strategic focus"
+	- var title_ar="طارق الفطيم | الصفحة الرئيسية"
+	- var desc_ar='منصة استثمارية إماراتية برؤية طويلة الأمد تُسهم في بناء قيمة مستدامة عبر قطاعات استراتيجية مع تركيز أساسي على العقارات.'
+	- var keywords_ar='طارق الفطيم, استثمار, الإمارات, رؤية طويلة الأمد, عقارات, تركيز استراتيجي'
+	- var __base = (typeof siteUrl !== 'undefined' ? siteUrl : 'http://localhost:3000')
+	- var link_en = __base + '/en/home.html'
+	- var link_ar = __base + '/ar/home.html'
+	- var img_en = __base + '/assets/images/taf-spotlight.jpg'
+	- var img_alt_en="TARIQ AL FUTTAIM — Spotlight"
+	- var img_ar = __base + '/assets/images/taf-spotlight.jpg'
+	- var img_alt_ar="طارق الفطيم — صورة مميزة"
+	- var author = "TARIQ AL FUTTAIM"
+	- var theme_color = "#0b2441"
+
+block content
+	include includes/home/_spotlight.pug
+	include includes/home/_hero.pug
+	include includes/home/_who-we-are.pug
+	include includes/home/_principles.pug
+	include includes/home/_founded-here.pug
+	include includes/home/_long-term-view.pug
+	
+	//- include includes/home/_about.pug
+	//- include includes/home/_by-the-numbers.pug
+	//- include includes/home/_capabilities.pug
+	//- include includes/home/_platforms.pug
+	//- include includes/home/_working-model.pug
+	//- include includes/home/_experience.pug
+	//- include includes/home/_connect-with.pug
+	//- include includes/home/_journey.pug
+	//- include includes/home/_gallery.pug

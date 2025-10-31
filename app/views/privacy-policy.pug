@@ -1,0 +1,22 @@
+extends layouts/layout.pug
+
+block pageTitle
+	- var title_en="TARIQ AL FUTTAIM | Privacy Policy"
+	- var desc_en="Read how we collect, use, and protect your information."
+	- var keywords_en="Tariq Al Futtaim, privacy, privacy policy, legal"
+	- var title_ar="طارق الفطيم | سياسة الخصوصية"
+	- var desc_ar='اطّلع على كيفية جمع معلوماتك واستخدامها وحمايتها.'
+	- var keywords_ar='طارق الفطيم, سياسة الخصوصية, الخصوصية'
+	- var __base = (typeof siteUrl !== 'undefined' ? siteUrl : 'http://localhost:3000')
+	- var link_en = __base + '/en/privacy-policy.html'
+	- var link_ar = __base + '/ar/privacy-policy.html'
+	- var img_en = __base + '/assets/images/taf-spotlight.jpg'
+	- var img_alt_en="TARIQ AL FUTTAIM — Privacy Policy"
+	- var img_ar = __base + '/assets/images/taf-spotlight.jpg'
+	- var img_alt_ar="طارق الفطيم — سياسة الخصوصية"
+	- var author = "TARIQ AL FUTTAIM"
+	- var theme_color = "#0b2441"
+	- var pageClass = 'page-blue'
+
+block content
+	include includes/components/_privacy-policy.pug

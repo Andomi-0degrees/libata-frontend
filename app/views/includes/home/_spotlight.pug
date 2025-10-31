@@ -1,0 +1,25 @@
+section.section.spotlight
+	// Spacer for consistent slide height via JS
+	.swiper-spacer
+	// Slider
+	.spotlight__slider.swiper
+		.swiper-wrapper
+			// Slide 1
+			.spotlight__slide.swiper-slide.slide-1
+				+img("bg-blue.svg", 'Spotlight Background', 'spotlight-bg', false)
+				.container
+					.row.justify-center
+						.col-12
+							.text-center
+								+img("full-logo.svg", 'Spotlight Background', 'spotlight-logo', false)
+			// Slide 2
+			.spotlight__slide.swiper-slide.slide-2
+				+img("carousel-2.png", 'Spotlight Background', 'spotlight-bg', false)
+				.container
+					.row
+						.col-12
+							h1.spotlight__title.typography-heading-white Built to carry forward.
+							p.spotlight__lead.typography-body-light-white Every decision is intentional. Every outcome is built to endure. <br> We shape places and partnerships that hold their value for generations.
+							span.spotlight__rule
+		// Pagination
+	.spotlight__pagination.swiper-pagination

@@ -1,0 +1,47 @@
+-
+    var leadershipData = [
+        {
+            src: "taf-dummy.jpg",
+            name: "Abdulraouf Taher",
+            designation: "Executive Director"
+        },
+        {
+            src: "taf-dummy.jpg",
+            name: "Irene Debarry",
+            designation: "Legal & Governance"
+        },
+        {
+            src: "taf-dummy.jpg",
+            name: "Name",
+            designation: "Designation"
+        }
+    ]
+
+section.section
+    .container
+        div(class="grid grid-cols-12 gap-6 lg:gap-8")
+
+            div(class="flex flex-col justify-center col-span-12 lg:col-span-6 relative md:after:absolute md:after:w-screen md:after:h-full md:after:-right-0 md:after:bg-white md:after:z-10")
+                div(class="flex flex-col relative justify-between gap-10 h-full z-20")
+                    div(class="flex flex-col gap-10 lg:max-w-[500px]")
+                        +heading("Built to lead with discipline and direction.", "h5", "h5 font-blue m-0")
+                        +heading("Our leadership team operates with strong governance and precision.", "h3", "h3 m-0")
+                        +heading("It exists to preserve the structure’s intent, execute with focus, and hold the standard.", "h6", "lg:max-w-[400px] h6 font-light-grey !font-light m-0")
+
+                    div(class="template-slider-arrows relative gap-3 md:gap-6 flex")
+                        div(class="swiper-button-prev swiper-button-prev-leader btn-prev after:hidden !relative !top-auto !left-auto !right-auto !m-0 rtl:rotate-[180deg]")
+                            span(class="material-symbols-outlined text-[18px] md:text-[24px]") chevron_left
+                        div(class="swiper-button-next swiper-button-next-leader btn-next after:hidden !relative !top-auto !left-auto !right-auto !m-0 rtl:rotate-[180deg]")
+                            span(class="material-symbols-outlined text-[18px] md:text-[24px]") chevron_right
+
+            div(class="flex flex-col justify-center col-span-12 lg:col-span-6")
+                div(class="w-full")
+                    .swiper-leadership.relative
+                        div(class="swiper-wrapper !pl-0")
+                            each data in leadershipData
+                                div(class="swiper-slide !w-[320px] md:!w-[376px] lg:!w-[429px]")
+                                    +img(data.src, "Souq Mina Zayed", "w-full h-[360px] md:h-[400px] lg:h-[500px] object-cover", false)
+                                    div(class="w-full flex flex-col gap-4 mt-24")
+                                        +heading(data.name, "h5", "h5 image-text m-0 name-title")
+                                        //- h6.font-medium !{data.name}
+                                        p.body-normal.m-0.font-light-grey !{data.designation}

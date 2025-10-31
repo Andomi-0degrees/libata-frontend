@@ -1,0 +1,30 @@
+extends layouts/layout.pug
+
+block pageTitle
+	- var title_en="TARIQ AL FUTTAIM | Who We Are"
+	- var desc_en="Discover our values, leadership, and purpose — committed to the UAE and the region with a long-term view."
+	- var keywords_en="Tariq Al Futtaim, who we are, values, leadership, UAE"
+	- var title_ar="طارق الفطيم | من نحن"
+	- var desc_ar="تعرّف على قيمنا وقيادتنا ورسالتنا — ملتزمون بالإمارات والمنطقة برؤية طويلة الأمد."
+	- var keywords_ar="طارق الفطيم, من نحن, قيم, قيادة, الإمارات"
+	- var __base = (typeof siteUrl !== 'undefined' ? siteUrl : 'http://localhost:3000')
+	- var link_en = __base + '/en/who-we-are.html'
+	- var link_ar = __base + '/ar/who-we-are.html'
+	- var img_en = __base + '/assets/images/whoweare.png'
+	- var img_alt_en="Who We Are — Brand image"
+	- var img_ar = __base + '/assets/images/whoweare.png'
+	- var img_alt_ar="من نحن — صورة العلامة"
+	- var author = "TARIQ AL FUTTAIM"
+	- var theme_color = "#0b2441"
+
+block content
+	include includes/pages/_spotlight-inner.pug
+
+	// Appart image + text section
+	include includes/pages/_appart-section.pug
+
+	// Heritage section
+	include includes/pages/_heritage-section.pug
+
+	// Strategic Focus banner
+	include includes/pages/_strategic-focus.pug

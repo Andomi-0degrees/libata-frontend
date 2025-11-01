@@ -6,6 +6,12 @@
   aspect-ratio: 1581 / 559;
   height: 100%;
   width: 100%;
+  align-content: center;
+
+  &__content {
+    padding-right: 10%;
+  }
+
 }
 
 .hero .container {
@@ -17,6 +23,7 @@
   grid-template-columns: 1.1fr .9fr;
   gap: 32px;
   align-items: center;
+
   &.relative {
     position: relative;
     z-index: 1;
@@ -28,6 +35,9 @@
   height: 100%;
   width: 100%;
   position: absolute;
+  display: flex;
+  justify-content: right;
+
 
 }
 
@@ -84,14 +94,13 @@
 .hero__media {
   text-align: right;
   height: 100%;
-  width: 100%;
 }
 
 .hero__image {
   width: 100%;
   height: 100%;
   border-radius: 24px;
-  // object-fit: fill;
+  object-fit: contain;
 }
 
 @media (max-width: 992px) {

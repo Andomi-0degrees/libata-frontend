@@ -1,6 +1,6 @@
 section.hero
   .container
-    .hero__row
+    .hero__row.relative
       .hero__content
         h1.hero__title One Number Mobile for Your Business — Simple, Smart, and Always Connected.
         p.hero__desc Unify your communication with a single mobile business number that connects all employees, enhances your professional image, and ensures you never miss a call or opportunity.
@@ -8,4 +8,8 @@ section.hero
           a.btn.btn--primary(href="#contact") Get Your One Number Today
           a.btn.btn--light(href="#features") Explore Features
       .hero__media
-        +img("one-number.png", 'Spotlight', 'hero__image', false)
+  .hero__row.hero__row-img
+    .hero__content
+    .hero__media
+      +img("one-number.png", 'Spotlight', 'hero__image', false)
+        //- +img("one-number.png", 'Spotlight', 'hero__image', false)

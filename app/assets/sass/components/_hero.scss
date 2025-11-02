@@ -3,7 +3,9 @@
   color: #fff;
   overflow: hidden;
   position: relative;
-  aspect-ratio: 1581 / 559;
+  @include media-breakpoint-up(xl) {
+    aspect-ratio: 1581 / 559;
+  }
   height: 100%;
   width: 100%;
   align-content: center;
@@ -34,10 +36,17 @@
   top: 0;
   height: 100%;
   width: 100%;
-  position: absolute;
   display: flex;
   justify-content: right;
+  @include media-breakpoint-up(lg) {
+    position: absolute;
 
+  }
+  .hero__content {
+    @include media-breakpoint-down(lg) {
+   display: none;
+    }
+  }
 
 }
 
@@ -94,6 +103,13 @@
 .hero__media {
   text-align: right;
   height: 100%;
+
+  @include media-breakpoint-down(xl) {
+    height: 70%;
+  }
+  @include media-breakpoint-down(md) {
+    height: 100%;
+  }
 }
 
 .hero__image {

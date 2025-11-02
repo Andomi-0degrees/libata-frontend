@@ -1,4 +1,11 @@
-.services { padding: 56px 0; }
+.services {
+  padding: 147px 0;
+
+
+  @include media-breakpoint-down(lg) {
+    padding: 100px 0;
+  }
+}
 
 .services__grid {
   display: grid;
@@ -6,10 +13,23 @@
   gap: 48px;
 }
 
-.service { text-align: center; color: #1A1F45; }
+.service {
+  text-align: center;
+  color: #1A1F45;
+}
 
-.service__icon { height: 118px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
-.service__img { height: 118px; width: auto; }
+.service__icon {
+  height: 118px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.service__img {
+  height: 118px;
+  width: auto;
+}
 
 .service__title {
   font-family: $font-primary;
@@ -34,7 +54,16 @@
   color: #1A1F45;
 }
 
-@media (max-width: 992px) { .services__grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
-@media (max-width: 600px) { .services__grid { grid-template-columns: 1fr; gap: 24px; } }
+@media (max-width: 992px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
 
-
+@media (max-width: 600px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

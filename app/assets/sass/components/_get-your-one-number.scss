@@ -1,11 +1,24 @@
-.getone { padding: 56px 0; }
+.getone {
+  padding: 113px 0;
 
-.getone__row { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .btn--primary {
+    width: 100%;
+  }
+
+}
+
+.getone__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
 
 /* Left */
 .getone__title {
   font-family: $font-primary;
-  font-weight: 700; /* Bold */
+  font-weight: 700;
+  /* Bold */
   font-style: normal;
   font-size: 44px;
   line-height: 120%;
@@ -16,7 +29,8 @@
 
 .getone__desc {
   font-family: $font-primary;
-  font-weight: 500; /* Medium */
+  font-weight: 500;
+  /* Medium */
   font-style: normal;
   font-size: 20px;
   line-height: 150%;
@@ -25,8 +39,20 @@
   margin: 0 0 16px;
 }
 
-.getone__list { margin: 0; padding-left: 18px; color: #1A1F45; }
-.getone__list li { margin: 8px 0; font-family: $font-primary; font-weight: 500; font-size: 14px; line-height: 150%; }
+
+.getone__list {
+  margin: 0;
+  padding-left: 18px;
+  color: #1A1F45;
+}
+
+.getone__list li {
+  margin: 8px 0;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+}
 
 /* Right card */
 .getone__card {
@@ -38,7 +64,8 @@
 
 .getone__card-title {
   font-family: $font-primary;
-  font-weight: 700; /* Bold */
+  font-weight: 700;
+  /* Bold */
   font-style: normal;
   font-size: 26px;
   line-height: 150%;
@@ -47,17 +74,56 @@
   margin: 0 0 12px;
 }
 
-.getone__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.getone__group { display: flex; flex-direction: column; margin-bottom: 12px; }
-.getone__label { font-family: $font-primary; font-weight: 600; font-size: 12px; color: #1A1F45; margin-bottom: 6px; }
-.getone__group input { height: 44px; border: 1px solid #C9D8EA; border-radius: 8px; padding: 0 12px; font-family: $font-primary; }
-.getone__group input:focus { outline: none; border-color: #0194F6; box-shadow: 0 0 0 3px rgba(1,148,246,.15); }
-
-.getone__note { text-align: center; margin-top: 10px; font-family: $font-primary; font-weight: 500; font-size: 12px; line-height: 150%; color: #1A1F45; }
-
-@media (max-width: 992px) {
-  .getone__row { grid-template-columns: 1fr; }
-  .getone__grid { grid-template-columns: 1fr; }
+.getone__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
+.getone__group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
 
+.getone__label {
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 12px;
+  color: #1A1F45;
+  margin-bottom: 6px;
+}
+
+.getone__group input {
+  height: 44px;
+  border: 1px solid #C9D8EA;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-family: $font-primary;
+}
+
+.getone__group input:focus {
+  outline: none;
+  border-color: #0194F6;
+  box-shadow: 0 0 0 3px rgba(1, 148, 246, .15);
+}
+
+.getone__note {
+  text-align: center;
+  margin-top: 10px;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  color: #1A1F45;
+}
+
+@media (max-width: 992px) {
+  .getone__row {
+    grid-template-columns: 1fr;
+  }
+
+  .getone__grid {
+    grid-template-columns: 1fr;
+  }
+}

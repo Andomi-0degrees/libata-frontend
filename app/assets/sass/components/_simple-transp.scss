@@ -1,44 +1,131 @@
 .simple {
-  background: #0194F6;
-  color: #fff;
-}
-
-.simple .container { padding: 56px 16px; }
-
-.simple__row {
-  display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 24px;
-  align-items: center;
-}
-
-.simple__media { position: relative; }
-.simple__image { width: 100%; height: auto; border-radius: 24px; }
-
-.simple__title {
-  font-family: $font-primary;
-  font-weight: 700; /* Bold */
-  font-style: normal;
-  font-size: 44px;
-  line-height: 120%;
-  letter-spacing: 0;
-  margin: 0 0 10px;
-}
-
-.simple__desc {
-  font-family: $font-primary;
-  font-weight: 500; /* Medium */
-  font-style: normal;
-  font-size: 20px;
-  line-height: 150%;
-  letter-spacing: 0;
-  margin: 0 0 16px;
-}
-
-.simple__cta { margin-top: 8px; }
-
-@media (max-width: 992px) {
-  .simple__row { grid-template-columns: 1fr; gap: 20px; }
-}
-
-
+    background: #0194F6;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    @include media-breakpoint-up(xl) {
+      aspect-ratio: 1521 / 517;
+    }
+    height: 100%;
+    width: 100%;
+    align-content: center;
+  
+    &__content {
+      padding-right: 10%;
+    }
+  
+  }
+  
+  .simple .container {
+    padding: 56px 16px;
+  }
+  
+  .simple__row {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 32px;
+    align-items: center;
+  
+    &.relative {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  
+  .simple__row-img {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+  
+    }
+    .simple__content {
+      @include media-breakpoint-down(lg) {
+     display: none;
+      }
+    }
+  
+  }
+  
+  .simple__title {
+    font-family: $font-primary;
+    font-weight: 700; // Bold
+    font-style: normal;
+    font-size: 44px;
+    line-height: 120%;
+    letter-spacing: 0;
+    margin: 0 0 12px;
+  }
+  
+  .simple__desc {
+    font-family: $font-primary;
+    font-weight: 500; // Medium
+    font-style: normal;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0;
+    margin: 0 0 20px;
+    opacity: .95;
+  }
+  
+  .simple__cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .btn.btn--primary {
+    background: #1A1F45;
+    color: #fff;
+    border: 1px solid transparent;
+  }
+  
+  .btn.btn--primary:hover {
+    background: #222C4E;
+    border-color: #222C4E;
+  }
+  
+  // Outline button to match design in hero
+  .btn.btn--light {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+  }
+  
+  .btn.btn--light:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #ffffff;
+  }
+  
+  .simple__media {
+    text-align: right;
+    height: 100%;
+  
+    @include media-breakpoint-down(xl) {
+      height: 70%;
+    }
+    @include media-breakpoint-down(md) {
+      height: 100%;
+    }
+  }
+  
+  .simple__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    object-fit: contain;
+  }
+  
+  @media (max-width: 992px) {
+    .simple .container {
+      padding: 40px 16px;
+    }
+  
+    .simple__row {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }

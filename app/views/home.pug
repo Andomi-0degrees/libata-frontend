@@ -17,6 +17,28 @@ block pageTitle
 	- var author = "TARIQ AL FUTTAIM"
 	- var theme_color = "#0b2441"
 
+block headExtra
+	script(type="application/ld+json").
+		{
+		  "@context": "https://schema.org",
+		  "@graph": [
+		    {
+		      "@type": "Organization",
+		      "@id": "#{__base}/#organization",
+		      "name": "TARIQ AL FUTTAIM",
+		      "url": "#{__base}/",
+		      "image": "#{img_en}"
+		    },
+		    {
+		      "@type": "WebSite",
+		      "@id": "#{__base}/#website",
+		      "url": "#{__base}/",
+		      "name": "TARIQ AL FUTTAIM",
+		      "inLanguage": "#{lang == 'en' ? 'en' : 'ar'}"
+		    }
+		  ]
+		}
+
 block content
 	//- include includes/component/_spotlight.pug
 	include includes/component/_hero.pug

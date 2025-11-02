@@ -10,9 +10,9 @@
     width: 100%;
     align-content: center;
   
-    &__content {
-      padding-right: 10%;
-    }
+    // &__content {
+    //   padding-right: 10%;
+    // }
   
   }
   
@@ -128,4 +128,6 @@
       grid-template-columns: 1fr;
       gap: 20px;
     }
+    .simple__title { font-size: 32px; }
+    .simple__desc { font-size: 16px; }
   }

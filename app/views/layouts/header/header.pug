@@ -6,14 +6,34 @@ header.header
                 a.header__logo(href="/")
                     +img("Logo.svg", 'Logo', 'logo-full', false)
 
-            .col-12.col-md-7
+            .col-6.col-md-7.align-end
                 nav.header__nav
                     a.header__link(href="#features") Features
                     a.header__link(href="#how") How It Works
                     a.header__link(href="#pricing") Pricing
                     a.header__link(href="#contact") Contact
+                button.header__mobile-toggle.d-md-none(type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false")
+                    span.header__bar
+                    span.header__bar
+                    span.header__bar
 
-            .col-12.col-md-3.text-md-end
+            .col-12.col-md-3.text-end
                 .header__actions
                     a.btn.btn--primary(href="") Recharge
                     a.btn.btn--primary(href="") Login
+
+    // Mobile full-screen panel
+    .header__mobile-panel#mobileNav
+        .header__mobile-head
+            a.header__logo(href="/")
+                +img("Logo.svg", 'Logo', 'logo-full', false)
+            button.header__nav-close(type="button" aria-label="Close menu")
+                span
+        nav.header__mobile-nav
+            a.header__link(href="#features") Features
+            a.header__link(href="#how") How It Works
+            a.header__link(href="#pricing") Pricing
+            a.header__link(href="#contact") Contact
+        .header__mobile-actions
+            a.btn.btn--primary(href="") Recharge
+            a.btn.btn--primary(href="") Login

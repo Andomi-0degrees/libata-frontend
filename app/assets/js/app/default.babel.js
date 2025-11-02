@@ -1347,7 +1347,7 @@
 			app.detectCulture();
 			// app.detectDevice();
 			// app.resizeListner();
-			// app.addEventListner();
+			app.addEventListner();
 			// app.lazyLoad();
 			// app.swiper();
 			// app.tabs();

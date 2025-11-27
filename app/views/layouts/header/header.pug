@@ -2,25 +2,37 @@
 header.header
     .container
         .row.align-items-center.header__row
-            .col-6.col-md-2
+            .col-6.col-lg-2
                 a.header__logo(href="/")
                     +img("Logo.svg", 'Logo', 'logo-full', false)
 
-            .col-6.col-md-7.align-end
+            .col-6.col-lg-7.align-end
                 nav.header__nav
-                    a.header__link(href="#features") Features
-                    a.header__link(href="#how") How It Works
-                    a.header__link(href="#pricing") Pricing
-                    a.header__link(href="#contact") Contact
-                button.header__mobile-toggle.d-md-none(type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false")
-                    span.header__bar
-                    span.header__bar
-                    span.header__bar
+                    a.header__link(href="#features")
+                        +translate('Features','')
+                    a.header__link(href="#how")
+                        +translate('How It Works','')
+                    a.header__link(href="#pricing")
+                        +translate('Pricing','')
+                    a.header__link(href="#contact")
+                        +translate('Contact','')
+                .d-lg-none.w-100
+                    .d-flex.align-items-center.justify-content-end    
+                        button.header__mobile-toggle(type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false")
+                            span.header__bar
+                            span.header__bar
+                            span.header__bar
+                        - var altLink = (lang == 'en' ? (typeof link_ar !== 'undefined' ? link_ar : '/ar/home.html') : (typeof link_en !== 'undefined' ? link_en : '/en/home.html'))
+                        a.btn.btn--primary.header__lang(href=altLink)= (lang == 'en' ? 'AR' : 'EN')                                
 
-            .col-12.col-md-3.text-end
+            .col-12.col-lg-3.text-end
                 .header__actions
-                    a.btn.btn--primary(href="") Recharge
-                    a.btn.btn--primary(href="") Login
+                    //- a.btn.btn--primary(href="")
+                    //-     +translate('Recharge','')
+                    //- a.btn.btn--primary(href="")
+                    //-     +translate('Login','')
+                    - var altLink = (lang == 'en' ? (typeof link_ar !== 'undefined' ? link_ar : '/ar/home.html') : (typeof link_en !== 'undefined' ? link_en : '/en/home.html'))
+                    a.btn.btn--primary.header__lang(href=altLink)= (lang == 'en' ? 'AR' : 'EN')
 
     // Mobile full-screen panel
     .header__mobile-panel#mobileNav
@@ -30,10 +42,18 @@ header.header
             button.header__nav-close(type="button" aria-label="Close menu")
                 span
         nav.header__mobile-nav
-            a.header__link(href="#features") Features
-            a.header__link(href="#how") How It Works
-            a.header__link(href="#pricing") Pricing
-            a.header__link(href="#contact") Contact
+            a.header__link(href="#features")
+                +translate('Features','')
+            a.header__link(href="#how")
+                +translate('How It Works','')
+            a.header__link(href="#pricing")
+                +translate('Pricing','')
+            a.header__link(href="#contact")
+                +translate('Contact','')
         .header__mobile-actions
-            a.btn.btn--primary(href="") Recharge
-            a.btn.btn--primary(href="") Login
+            //- - var altLinkM = (lang == 'en' ? (typeof link_ar !== 'undefined' ? link_ar : '/ar/home.html') : (typeof link_en !== 'undefined' ? link_en : '/en/home.html'))
+            //- a.header__link.header__lang(href=altLinkM)= (lang == 'en' ? 'AR' : 'EN')
+            a.btn.btn--primary(href="")
+                +translate('Recharge','')
+            a.btn.btn--primary(href="")
+                +translate('Login','')

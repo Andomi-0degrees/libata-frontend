@@ -3,31 +3,44 @@ section.getone#contact
     .getone__row
       // Left copy
       .getone__copy
-        h2.getone__title Get Your One Number Today
-        p.getone__desc Fill out the form and our team will reach out to set up your One Number Mobile solution. Typical setup takes under 24 hours.
+        h2.getone__title
+          +translate('Get Your One Number Today','احصل على رقمك الموحّد اليوم')
+        p.getone__desc
+          +translate('Fill out the form and our team will reach out to set up your One Number Mobile solution. Typical setup takes under 24 hours.','عبّئ النموذج، وسيقوم فريقنا بالتواصل معك لتفعيل خدمة الرقم الموحّد. عادةً يتم الإعداد خلال أقل من 24 ساعة.')
         ul.getone__list
-          li Route calls to teams or individuals in seconds
-          li Professional IVR and voicemail‑to‑email
-          li Time‑based rules and failover for reliability
-          li Keep personal numbers private with caller ID masking
+          li
+            +translate('Route calls to teams or individuals in seconds','توجيه المكالمات للفِرَق أو الأفراد خلال ثوانٍ')
+          li
+            +translate('Professional IVR and voicemail‑to‑email','ردّ آلي احترافي وتحويل الرسائل الصوتية إلى البريد الإلكتروني')
+          li
+            +translate('Time‑based rules and failover for reliability','قواعد توجيه حسب الوقت ونظام احتياطي لضمان الاستمرارية')
+          li
+            +translate('Keep personal numbers private with caller ID masking','حماية أرقام الموظفين عبر إخفاء هوية المُتصل')
 
       // Right form card
       .getone__card
-        h3.getone__card-title Request a Call Back
+        h3.getone__card-title
+          +translate('Request a Call Back','اطلب اتصالاً من فريقنا')
         form.getone__form(action="#" method="post" novalidate)
           .getone__grid
             .getone__group
-              label.getone__label(for="firstName") First Name
-              input#getoneFirst(type="text" name="firstName" placeholder="First Name")
+              label.getone__label(for="firstName")
+                +translate('First Name','الاسم الأول')
+              input#getoneFirst(type="text" name="firstName" placeholder="الاسم الأول")
             .getone__group
-              label.getone__label(for="lastName") Last Name
-              input#getoneLast(type="text" name="lastName" placeholder="Last Name")
+              label.getone__label(for="lastName")
+                +translate('Last Name','اسم العائلة')
+              input#getoneLast(type="text" name="lastName" placeholder="اسم العائلة")
           .getone__group
-            label.getone__label(for="email") Email
+            label.getone__label(for="email")
+              +translate('Email','البريد الإلكتروني')
             input#getoneEmail(type="email" name="email" placeholder="you@example.com")
           .getone__group
-            label.getone__label(for="phone") Contact Number
+            label.getone__label(for="phone")
+              +translate('Contact Number','رقم التواصل')
             input#getonePhone(type="tel" name="phone" placeholder="+971 55 123 4567")
-          button.btn.btn--primary(type="submit") Submit
-          p.getone__note By submitting, you agree to be contacted about One Number Mobile. We respect your privacy.
+          button.btn.btn--primary(type="submit")
+            +translate('Submit','إرسال')
+          p.getone__note
+            +translate('By submitting, you agree to be contacted about One Number Mobile. We respect your privacy.','بتقديمك الطلب، فإنك توافق على أن يتم التواصل معك بخصوص خدمة الرقم الموحّد. نحن نُقدّر خصوصيتك.')
 

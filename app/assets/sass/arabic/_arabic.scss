@@ -3,4 +3,36 @@
 	.flip {
 		transform: scaleX(-1);
 	}
+
+	// Hero RTL adjustments: keep media on the right and mirror image
+	.hero {
+		&__row {
+			// Use explicit grid areas so RTL doesn't swap positions
+			grid-template-areas: "content media";
+		}
+
+		&__row-img {
+			justify-content: flex-end;
+		}
+
+		&__image {
+			transform: scaleX(-1);
+		}
+
+		@media (max-width: 992px) {
+			&__row {
+				grid-template-areas:
+					"content"
+					"media";
+			}
+		}
+	}
+
+	// Simple Transparent Pricing: image on right + flipped
+	.simple {
+		&__row-img {
+			justify-content: flex-end;
+		}
+		// Reuse global .hero__image flip (class used in template)
+	}
 }

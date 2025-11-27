@@ -2,11 +2,15 @@ section.hero
   .container
     .hero__row.relative
       .hero__content
-        h1.hero__title One Number Mobile for Your Business — Simple, Smart, and Always Connected.
-        p.hero__desc Unify your communication with a single mobile business number that connects all employees, enhances your professional image, and ensures you never miss a call or opportunity.
+        h1.hero__title
+          +translate('One Number Mobile for Your Business — Simple, Smart, and Always Connected.','عنوان رئيسي رقم واحد لهاتف عملك – بسيط، ذكي، ودائمًا متاح. وصف رئيسي')
+        p.hero__desc
+          +translate('Unify your communication with a single mobile business number that connects all employees, enhances your professional image, and ensures you never miss a call or opportunity.','وحّد اتصالاتك برقم جوّال واحد للأعمال يربط جميع الموظفين، يعزز صورتك الاحترافية، ويضمن عدم تفويت أي مكالمة أو فرصة.')
         .hero__cta
-          a.btn.btn--primary(href="#contact") Get Your One Number Today
-          a.btn.btn--light(href="#features") Explore Features
+          a.btn.btn--primary(href="#contact")
+            +translate('Get Your One Number Today','احصل على رقمك الموحد اليوم')
+          a.btn.btn--light(href="#features")
+            +translate('Explore Features','استكشف المزايا')
       .hero__media
   .hero__row.hero__row-img
     .hero__content

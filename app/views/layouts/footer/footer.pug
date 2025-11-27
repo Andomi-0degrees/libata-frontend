@@ -4,7 +4,7 @@ footer.footer
       .footer__brand
         +img("Logo.svg", 'Logo', 'footer__logo', false)
 
-      .footer__cols
+      //- .footer__cols
         .footer__col
           h4.footer__heading App
           ul.footer__list
@@ -48,15 +48,20 @@ footer.footer
             li: a(href="#") Careers
 
     .footer__bottom
-      p.footer__copy © 2025 Lebara. All rights reserved.
+      p.footer__copy
+        +translate('© 2025 Lebara. All rights reserved.','© 2025 ليبارا. جميع الحقوق محفوظة.')
       .footer__legal
-        a(href="#") Privacy Policy
+        a(href="#")
+          +translate('Privacy Policy','سياسة الخصوصية')
         span.separator |
-        a(href="#") Terms and Conditions
+        a(href="#")
+          +translate('Terms and Conditions','الشروط والأحكام')
         span.separator |
-        a(href="#") Customers Rights and Responsibilities
+        a(href="#")
+          +translate('Customers Rights and Responsibilities','حقوق ومسؤوليات العملاء')
         span.separator |
-        a(href="#") Regulations for Curbing SPAM Messages & Calls
+        a(href="#")
+          +translate('Regulations for Curbing SPAM Messages & Calls','لوائح الحد من الرسائل والمكالمات المزعجة')
       .footer__social
         a(href="#" aria-label="Facebook").fa-btn
           i.fa-brands.fa-facebook-f

@@ -10,9 +10,10 @@
     width: 100%;
     align-content: center;
   
-    // &__content {
-    //   padding-right: 10%;
-    // }
+    &__content {
+      grid-area: content;
+      padding-right: 10%;
+    }
   
   }
   
@@ -23,6 +24,7 @@
   .simple__row {
     display: grid;
     grid-template-columns: 1.1fr .9fr;
+  grid-template-areas: "content media";
     gap: 32px;
     align-items: center;
   
@@ -101,6 +103,7 @@
   }
   
   .simple__media {
+  grid-area: media;
     text-align: right;
     height: 100%;
   
@@ -126,6 +129,9 @@
   
     .simple__row {
       grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "media";
       gap: 20px;
     }
     .simple__title { font-size: 32px; }

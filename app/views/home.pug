@@ -1,21 +1,21 @@
 extends layouts/layout.pug
 
 block pageTitle
-	- var title_en="TARIQ AL FUTTAIM | Home"
-	- var desc_en="An Emirati investment platform with a long-term view, shaping enduring value across strategic sectors with a core focus on real estate."
-	- var keywords_en="Tariq Al Futtaim, UAE investments, Emirati investor, long-term view, real estate, strategic focus"
-	- var title_ar="طارق الفطيم | الصفحة الرئيسية"
-	- var desc_ar='منصة استثمارية إماراتية برؤية طويلة الأمد تُسهم في بناء قيمة مستدامة عبر قطاعات استراتيجية مع تركيز أساسي على العقارات.'
-	- var keywords_ar='طارق الفطيم, استثمار, الإمارات, رؤية طويلة الأمد, عقارات, تركيز استراتيجي'
+	- var title_en="LEBARA | One Number Mobile for Your Business"
+	- var desc_en="One Number Mobile for Your Business. Simple, Smart, and Always Connected."
+	- var keywords_en="One Number Mobile for Your Business Simple, Smart, and Always Connected."
+	- var title_ar=title_en
+	- var desc_ar=desc_en
+	- var keywords_ar=keywords_en
 	- var __base = (typeof siteUrl !== 'undefined' ? siteUrl : 'http://localhost:3000')
 	- var link_en = __base + '/en/home.html'
 	- var link_ar = __base + '/ar/home.html'
 	- var img_en = __base + '/assets/images/taf-spotlight.jpg'
-	- var img_alt_en="TARIQ AL FUTTAIM — Spotlight"
+	- var img_alt_en="LEBARA — Spotlight"
 	- var img_ar = __base + '/assets/images/taf-spotlight.jpg'
-	- var img_alt_ar="طارق الفطيم — صورة مميزة"
-	- var author = "TARIQ AL FUTTAIM"
-	- var theme_color = "#0b2441"
+	- var img_alt_ar=img_alt_en
+	- var author = "LEBARA"
+	- var theme_color = "#ffffff"
 
 block headExtra
 	script(type="application/ld+json").
@@ -25,7 +25,7 @@ block headExtra
 		    {
 		      "@type": "Organization",
 		      "@id": "#{__base}/#organization",
-		      "name": "TARIQ AL FUTTAIM",
+		      "name": "LEBARA",
 		      "url": "#{__base}/",
 		      "image": "#{img_en}"
 		    },
@@ -33,8 +33,8 @@ block headExtra
 		      "@type": "WebSite",
 		      "@id": "#{__base}/#website",
 		      "url": "#{__base}/",
-		      "name": "TARIQ AL FUTTAIM",
-		      "inLanguage": "#{lang == 'en' ? 'en' : 'ar'}"
+		      "name": "LEBARA",
+		      "inLanguage": "en"
 		    }
 		  ]
 		}

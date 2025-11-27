@@ -3,10 +3,13 @@ section.simple#pricing
     .simple__row.relative
       .simple__media
       .simple__content
-        h2.simple__title Simple, Transparent Pricing
-        p.simple__desc Tell us about your team size and call volumes – we’ll tailor the perfect plan. No setup fees. Cancel anytime.
+        h2.simple__title
+          +translate('Simple, Transparent Pricing','تسعير بسيط وواضح')
+        p.simple__desc
+          +translate('Tell us about your team size and call volumes – we’ll tailor the perfect plan. No setup fees. Cancel anytime.','شاركنا حجم فريقك وعدد مكالماتك لنقدّم لك الخطة المناسبة. بدون رسوم إعداد. ويمكنك الإلغاء في أي وقت.')
         .simple__cta
-          a.btn.btn--primary(href="#contact") Get Your One Number Today
+          a.btn.btn--primary(href="#contact")
+            +translate('Get Your One Number Today','احصل على رقمك الموحّد اليوم')
 
   .simple__row.simple__row-img
     .simple__media

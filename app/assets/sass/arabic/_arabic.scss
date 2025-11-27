@@ -33,6 +33,16 @@
 		&__row-img {
 			justify-content: flex-end;
 		}
+		.simple__row-img{
+			    justify-content: right;
+				// .hero__image[
+
+				// ]
+		}
+
+		// .hero__image{
+		// 		transform: scaleX(1);
+		// }
 		// Reuse global .hero__image flip (class used in template)
 	}
 }

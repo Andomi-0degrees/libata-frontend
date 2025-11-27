@@ -11,7 +11,6 @@
   align-content: center;
 
   &__content {
-    grid-area: content;
     padding-right: 10%;
   }
 
@@ -24,7 +23,6 @@
 .hero__row {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
-  grid-template-areas: "content media";
   gap: 32px;
   align-items: center;
 
@@ -39,7 +37,7 @@
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: right;
   @include media-breakpoint-up(lg) {
     position: absolute;
 
@@ -103,7 +101,6 @@
 }
 
 .hero__media {
-  grid-area: media;
   text-align: right;
   height: 100%;
 
@@ -129,11 +126,6 @@
 
   .hero__row {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "content"
-      "media";
     gap: 20px;
   }
-  .hero__title { font-size: 32px; }
-  .hero__desc { font-size: 16px; }
 }
